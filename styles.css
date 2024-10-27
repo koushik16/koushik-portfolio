@@ -1,0 +1,274 @@
+/* Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container Layout */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px; /* Adjusted sidebar width */
+    background: #f4f4f4;
+    /* linear-gradient(135deg, #f4f4f4, #555); Subtle gradient background */
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Push social links to the bottom */
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Circular profile image */
+    margin: 0 auto 1.5rem; /* Center the image */
+    object-fit: cover; /* Crop image if it's not square */
+    border: 4px solid #333; /* Border matching the accent color */
+}
+
+/* Sidebar Header */
+.sidebar h2 {
+    font-size: 1.2rem;
+    color: #333; /* Accent color for header */
+    margin-bottom: 1rem;
+}
+
+/* Sidebar Paragraph */
+.sidebar p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Sidebar Navigation Links */
+.side-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-nav ul li {
+    margin-bottom: 1rem;
+}
+
+.side-nav ul li a {
+    color: #333; /* Accent color for links */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.side-nav ul li a:hover {
+    color: #fff; /* Lighten color on hover */
+}
+
+/* Social Links at the Bottom */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    margin-top: auto; /* Pushes social links to the bottom */
+}
+
+.social-links a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 300px; /* Adjusted margin to match sidebar width */
+    padding: 2rem;
+    width: calc(100% - 300px);
+    overflow-y: auto;
+    font-size: 0.9rem; /* Reduced font size */
+}
+
+/* Set bold text to inherit font size in main content */
+.main-content strong {
+    font-weight: bold;
+    font-size: inherit;
+}
+
+/* Contact Links at the Top of the Main Content */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* justify-content: flex-end; */
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact-links a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* display: flex; */
+    /* align-items: right; */
+}
+
+.contact-links a:hover {
+    color: #0077b6;
+}
+
+/* Projects Section */
+.project-list {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+/* Reduced spacing between points */
+.project-list li, .research-list li {
+    margin-bottom: 0.5rem;
+}
+
+.project-list p {
+    display: inline;
+}
+
+.project-list a {
+    color: #990000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.project-list a:hover {
+    text-decoration: underline;
+}
+
+/* Research Section */
+.research-list {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+.research-list h3 {
+    font-size: inherit;
+}
+
+/* General Section Styling */
+section {
+    margin-bottom: 2rem;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea, form button {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005f87;
+}
+
+/* Panel Styling for Right-Side Sections */
+.highlight {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 2rem;
+}
+
+/* Section Headings with Icons */
+.highlight h2 {
+    font-size: 1.8rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* General Text and List Styling in Panels */
+.highlight p, .highlight ul {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* List Styling for Publications and Research */
+.highlight ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+    margin-top: 1rem;
+}
+
+/* About Me Section Specific Styling */
+#about-me .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#about-me .about-content p {
+    font-size: 1rem;
+    color: #555;
+}
+
+#about-me .about-content .quote {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+#about-me .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#about-me .skills ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#about-me .skills li {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: bold;
+}
